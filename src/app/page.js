@@ -1,101 +1,71 @@
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { FlickeringGrid } from "@/components/ui/flickering-grid";
+import { HyperText } from "@/components/ui/hyper-text";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import {ArrowRightIcon ,FacebookIcon ,Github, LinkedinIcon} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <div className="relative container mx-auto overflow-hidden md:h-[80vh] ">
+        <FlickeringGrid
+          className=" absolute opacity-50 top-0 left-0  w-full   inset-0 z-0 [mask-image:radial-gradient(750px_circle_at_center,white,transparent)]"
+          squareSize={4}
+          gridGap={5}
+          color="#60A5FA"
+          maxOpacity={0.5}
+          flickerChance={0.1}
+          height={1000}
+          width={1348}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className="h-full  grid grid-cols-1 md:grid-cols-12">
+          <div className="   col-span-8  flex items-center justify-center">
+            <div className="   p-5">
+              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out backdrop-blur bg-white/45 border rounded-full mx-5  hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                <span>✨ Web developer</span>
+                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+              </AnimatedShinyText>
+
+              <HyperText
+                className={
+                  " z-[9999] bg-clip-text text-transparent text-3xl text-center md:text-5xl lg:text-7xl bg-gradient-to-br from-violet-300 to-violet-700"
+                }
+              >
+                Md.Juwel Rana
+              </HyperText>
+              <ShimmerButton className="shadow-2xl  mx-auto md:mx-0 ">
+                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white  dark:from-white dark:to-slate-900/10 lg:text-lg">
+                  Download Resume
+                </span>
+              </ShimmerButton>
+            </div>
+          </div>
+          <div className=" flex flex-col space-y-5 justify-center items-center z-[999] col-span-4 ">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              className="rounded-md shadow-md"
+              src="/Photo-of-owner.jpg"
+              alt="Me"
+              width={300}
+              height={300}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="flex space-x-5">
+
+            <Link href="https://www.facebook.com/juwel34/" target="_blank">
+             <FacebookIcon className="w-10 h-10 text-blue-500" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/md-juwel-rana/" target="_blank">
+             <LinkedinIcon className="w-10 h-10 text-blue-500" />
+            </Link>
+            <Link href="https://github.com/JuwelRana34" target="_blank">
+             <Github className="w-10 h-10 text-blue-500" />
+            </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }

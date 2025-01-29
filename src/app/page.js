@@ -36,11 +36,13 @@ export default function Home() {
               >
                 Md.Juwel Rana
               </HyperText>
+              <Link href={"/frontend developer resume of juwelrana.pdf"} target="_blank" download> 
               <ShimmerButton className="shadow-2xl  mx-auto md:mx-0 ">
                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white  dark:from-white dark:to-slate-900/10 lg:text-lg">
                   Download Resume
                 </span>
               </ShimmerButton>
+              </Link>
             </div>
           </div>
           <div className=" flex flex-col space-y-5 justify-center items-center z-[999] col-span-4 ">
@@ -50,6 +52,9 @@ export default function Home() {
               alt="Me"
               width={300}
               height={300}
+             quality={100}
+             placeholder="empty"
+            
             />
             <div className="flex space-x-5">
 

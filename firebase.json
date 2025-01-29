@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "developerjuwelrana",
+    "site":"developerjuwelrana",
     "public": "out",
     "ignore": [
       "firebase.json",

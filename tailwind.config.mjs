@@ -163,7 +163,22 @@ export default {
   			'shiny-text': 'shiny-text 8s infinite',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
-  		}
+  		},
+		  animation: {
+			spotlight: "spotlight 2s ease .75s 1 forwards",
+		  },
+		  keyframes: {
+			spotlight: {
+			  "0%": {
+				opacity: 0,
+				transform: "translate(-72%, -62%) scale(0.5)",
+			  },
+			  "100%": {
+				opacity: 1,
+				transform: "translate(-50%,-40%) scale(1)",
+			  },
+			},
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -61,6 +61,16 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+  			spotlight: {
+  				'0%': {
+  					opacity: 0,
+  					transform: 'translate(-72%, -62%) scale(0.5)'
+  				},
+  				'100%': {
+  					opacity: 1,
+  					transform: 'translate(-50%,-40%) scale(1)'
+  				}
+  			},
   			'aurora-border': {
   				'0%, 100%': {
   					borderRadius: '37% 29% 27% 27% / 28% 25% 41% 37%'
@@ -131,14 +141,6 @@ export default {
   					right: '25%'
   				}
   			},
-  			'shiny-text': {
-  				'0%, 90%, 100%': {
-  					'background-position': 'calc(-100% - var(--shiny-width)) 0'
-  				},
-  				'30%, 60%': {
-  					'background-position': 'calc(100% + var(--shiny-width)) 0'
-  				}
-  			},
   			'shimmer-slide': {
   				to: {
   					transform: 'translate(calc(100cqw - 100%), 0)'
@@ -160,25 +162,10 @@ export default {
   			}
   		},
   		animation: {
-  			'shiny-text': 'shiny-text 8s infinite',
+  			spotlight: 'spotlight 2s ease .75s 1 forwards',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
-  		},
-		  animation: {
-			spotlight: "spotlight 2s ease .75s 1 forwards",
-		  },
-		  keyframes: {
-			spotlight: {
-			  "0%": {
-				opacity: 0,
-				transform: "translate(-72%, -62%) scale(0.5)",
-			  },
-			  "100%": {
-				opacity: 1,
-				transform: "translate(-50%,-40%) scale(1)",
-			  },
-			},
-		  },
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

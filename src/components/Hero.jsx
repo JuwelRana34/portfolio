@@ -28,13 +28,14 @@ function Hero() {
           </AnimatedShinyText>
 
            
-          <HyperText
-            className={
+          <HyperText className={
               " z-[9999] bg-clip-text text-transparent text-3xl text-center md:text-5xl lg:text-7xl bg-gradient-to-br from-violet-300 to-violet-700"
-            }
-          > 
+            }  > 
+            
+        
          Md.Juwel Rana
           </HyperText>
+          
 
           <Link href={"/frontend developer resume of juwelrana.pdf"} target="_blank" download> 
           <ShimmerButton className="shadow-2xl  mx-auto md:mx-0 ">
@@ -43,6 +44,7 @@ function Hero() {
             </span>
           </ShimmerButton>
           </Link>
+          
         </div>
       </div>
       <div className=" flex flex-col space-y-5 justify-center items-center z-[999] col-span-4 ">
